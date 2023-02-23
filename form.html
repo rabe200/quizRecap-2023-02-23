@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <title>Quiz App</title>
+</head>
+<body class="form_body">
+    <section class="formular_container">
+        <h1 class="form-title">Quiz App</h1>
+
+        <form class="formular">
+            <label for="form_question">Your question:
+            </label>
+            <textarea required 
+            name="question" 
+            id="form_question" 
+            data-js="form_question"
+            type="text"
+            class="formular__textarea"></textarea>
+            
+            <output class="counter" id="counter_question" data-js="output_counter_question"></output>
+            <label for="counter_question" class="counter_label">chars left</label>
+            
+            <label for="form_answer">Your answer:
+            </label>
+            <textarea required 
+                name="answer" 
+                id="form_answer" 
+                data-js="form_answer"
+                type="text"
+                class="formular__textarea"></textarea>
+                <output class="counter" id="counter_answer" data-js="output_counter_answer"></output>
+                <label for="counter_question" class="counter_label">chars left</label>
+
+            <label for="">Tag:</label>
+            <input required 
+            name="tag" 
+            id="form_tag" 
+            data-js="form_tag"
+            type="text"
+            class="tag"
+            />
+            <section class="space"> </section>
+      
+            <button 
+                type="submit" 
+                id="submit_button" 
+                 class="submit_button">
+                    Submit
+            </button>
+        
+        
+        </form>
+
+        <footer>
+            <nav>
+                <ul class="navbar">
+                    <li class="navbar__button">IMG1</li>
+                    <li class="navbar__button">IMG2</li>
+                    <li class="navbar__button">IMG3</li>
+                    <li class="navbar__button">IMG4</li>
+                </ul>
+            </nav>
+        </footer>
+
+
+    </section>
+</body>
+</html>
