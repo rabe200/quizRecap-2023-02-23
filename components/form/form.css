@@ -1,0 +1,110 @@
+* {box-sizing: border-box;}
+
+.form_body {
+    height: 100vh;
+    width: 100vw;
+    border: 1px solid;
+    min-width: 600px;
+    min-height: 600px;
+}
+
+.formular_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: 1px salmon solid;
+   margin: 0;
+   position: relative;
+   left: 10vw;
+   width: 80vw;
+   height: 80vh;
+   
+}
+.counter {
+    background-color: aqua;
+    height: 10px;
+    width: 80%;
+    text-align: right;
+}
+.counter_label {
+text-align: right;
+}
+
+.formular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+.form-title {
+    margin-top: 10px;
+    border: 2px black solid;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.formular__textarea {
+    background-color: transparent;
+    width: 80%;
+    height: 15vh;
+    min-height: 20px;
+    border: 2px black solid;
+    margin-bottom: 20px;
+}
+
+input[type=text]{
+    display: flex;
+    justify-content: flex-start;
+font-size: 1.6rem;
+text-align: start;
+color: crimson;
+width: 80%;
+margin: 0;
+border: 2px solid black;
+}
+
+input {
+    width: 80%;
+    height: 15vh;
+    min-height: 20px;
+}
+
+label {
+    text-align: left;
+    width: 80%;
+    border: none;
+    font-style: italic;
+}
+
+.tag {
+    height: 5vh;
+    min-height: 20px;
+    margin: 20px;
+}
+
+
+
+
+.space {
+    height: 10px;
+}
+
+.submit_button {
+    position: relative;
+    width: 20%;
+    border: black 2px solid;
+    background-color: transparent;
+}
+
+.navbar {
+    width: 80%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
