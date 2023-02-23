@@ -9,10 +9,12 @@
 
 .bookmark:hover {
   cursor: pointer;
+  /* background-color: brown; */
 }
 
 .bookmark--active {
   color: var(--black);
+  background-color: aliceblue;
 }
 
 .bookmark__icon {

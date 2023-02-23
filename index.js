@@ -16,5 +16,17 @@ const card__answer=document.querySelector('.card__answer');
 answer.addEventListener("click", () => {
     
     console.log("<--- show answer clicked --->");
+    
+    if (card__answer.classList.contains("card__answer--active"))
+ {   console.log("hidden answer");    
+    answer.textContent = "Show answer";
+}
+    else {
+        console.log("Displayed answeer");
+answer.textContent ="Hide answer" ;
+console.log(answer)}
+
+    
+
     card__answer.classList.toggle("card__answer--active");
 });
