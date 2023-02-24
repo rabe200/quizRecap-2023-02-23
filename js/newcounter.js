@@ -16,10 +16,12 @@
 // })
 
 const form = document.querySelector('[data-js="formular"]');
-console.log("form: " + form);
+// console.log("form: " + form);
 
 form.addEventListener("input", (event) => {
     let x=event.target;
-    console.log(x.value.length);
-    x.nextElementSibling.textContent = x.value.length;
+    let y = x.getAttribute('maxlength');
+    // let z = y-x.value.length;
+    // console.log("y - x:   " +  y + "  " +  x.value.length + " = " + z);
+    x.nextElementSibling.textContent = y - x.value.length;
 });
