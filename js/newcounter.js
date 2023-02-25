@@ -25,3 +25,13 @@ form.addEventListener("input", (event) => {
     // console.log("y - x:   " +  y + "  " +  x.value.length + " = " + z);
     x.nextElementSibling.textContent = y - x.value.length;
 });
+
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    console.log(data);
+    const textInput = event.target.textContent;
+    console.log(textInput);
+});
