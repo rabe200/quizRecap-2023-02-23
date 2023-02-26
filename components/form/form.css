@@ -1,26 +1,21 @@
 * {box-sizing: border-box;}
 
 .form_body {
-    height: 600px;
-    width: 600px;
-    /* border: 11px orange solid; */
+    height: 480px;
+    width: 320px;
     position: relative;
-    margin: 1%;
-    min-height: 500px;
-}
+    }
 
 .formular_container {
    display: block;
    flex-direction: column;
    align-items: center;
-   /* border: 1px solid; */
    position: relative;
-   width: 80%;
-   height: 500px;
+   width: 100%;
+   
    
 }
 .counter {
-    /* background-color: aqua; */
     display: block;
     height: 10px;
     width: 80%;
@@ -54,8 +49,7 @@ text-align: right;
     display: block;
     background-color: transparent;
     width: 80%;
-    height: 120px;
-    min-height: 20px;
+    height: 60px;
     border: 2px black solid;
     font-size: 2rem;
 }
