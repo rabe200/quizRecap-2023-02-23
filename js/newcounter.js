@@ -4,7 +4,8 @@ const formUL = document.querySelector('[data-js="formUL"]');
 form.addEventListener("input", (event) => {
     let x=event.target;
     let y = x.getAttribute('maxlength');
-    x.nextElementSibling.textContent = y - x.value.length;
+    if (x != document.querySelector('[data-js="form_tag"]')) {
+    x.nextElementSibling.textContent = y - x.value.length;}
 });
 
 ///new Card build
