@@ -1,37 +1,78 @@
-// const input1 = document.querySelector('[data-js="form_question"]');
-// let output1 = document.querySelector('[data-js="output_counter_question"]');
-// let maxlength = input1.getAttribute('maxlength');
-// console.log(maxlength);
-// console.log(input1.value);
-// console.log(output1);
-
-
-
-
-
-// input1.addEventListener("input", () => {
-//     let x = input1.value.length;
-//     console.log(x);
-//     output1.textContent=x;
-// })
-
 const form = document.querySelector('[data-js="formular"]');
-// console.log("form: " + form);
+const formUL = document.querySelector('[data-js="formUL"]');
 
 form.addEventListener("input", (event) => {
     let x=event.target;
     let y = x.getAttribute('maxlength');
-    // let z = y-x.value.length;
-    // console.log("y - x:   " +  y + "  " +  x.value.length + " = " + z);
     x.nextElementSibling.textContent = y - x.value.length;
 });
 
+///new Card build
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
     console.log(data);
-    const textInput = event.target.textContent;
-    console.log(textInput);
+    newCard(data);
+    event.target.form_question.focus();
+    form.reset();
 });
+
+const newCard = (data) => {
+    const cardListItem = document.createElement("li");
+    const cardItem = document.createElement("article");
+    const cardItemQuestion = document.createElement("h2");
+    const cardItemButton = document.createElement("button");
+    const cardItemAnswer = document.createElement("p");
+    const cardItemTagList = document.createElement("ul");
+    const cardItemTagListItem = document.createElement("li");
+    const cardItemButtonBookmark = document.createElement("button");
+
+    console.log(cardListItem,cardItem,cardItemButton,cardItemAnswer,cardItemTagList,cardItemTagListItem,cardItemQuestion,cardListItem,cardItemButtonBookmark);
+
+    cardListItem.classList.add("cardList");
+    cardItem.classList.add("card");
+    cardItemQuestion.classList.add("card__question")
+    cardItemButton.classList.add("card__button-answer");
+    cardItemAnswer.classList.add("card__answer");
+    cardItemTagList.classList.add("card__tag-list");
+    cardItemTagListItem.classList.add("card__tag-list-item");
+    cardItemButtonBookmark.classList.add("card__button-bookmark");
+
+    console.log("classLists added to createdElements");
+
+    cardItemQuestion.textContent = data.question;
+    cardItemAnswer.textContent = data.answer;
+    cardItemButton.textContent = "Show answer";
+    cardItemButton.type = "button";
+    cardItemTagList.textContent = data.tag;
+
+    console.log("textContent set for: cardItemQuestion, cardItemAnswer, cardItemButton, cardItemTagList");
+    console.log("initializing textContentCheck:")
+
+    cardItemButton.addEventListener("click", () => 
+    {
+
+        if (cardItemAnswer.classList.contains("card__answer") === false) {
+            cardItemButton.textContent = "Show Answer";
+          } else {
+            cardItemButton.textContent = "Hide Answer";
+          }
+          cardItemAnswer.classList.toggle("card__answer");
+          
+    });
+
+    console.log(cardItemQuestion.textContent, cardItemAnswer.textContent, cardItemButton.textContent, cardItemTagList.textContent);
+    console.log("check successful");
+    formUL.append(cardListItem);
+    cardListItem.append(cardItem);
+    cardItem.append(cardItemQuestion);
+    cardItem.append(cardItemAnswer);
+    cardItem.append(cardItemButton);
+    cardItem.append(cardItemButtonBookmark);
+    cardItem.append(cardItemTagList);
+    cardItem.append(cardItemTagListItem);
+
+
+ }
