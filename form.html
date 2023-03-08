@@ -13,7 +13,7 @@
         <h1 class="form-title">Quiz App</h1>
 
         <form class="formular" data-js="formular">
-            <label for="form_question">Your question:
+            <label for="form_question" class="formular__label">Your question:
             </label>
             <textarea required 
             name="question" 
@@ -25,9 +25,9 @@
             ></textarea>
             
             <output class="counter" id="counter_question" data-js="output_counter_question"></output>
-            <label for="counter_question" class="counter_label">chars left</label>
+            <label for="counter_question" class="counter__label">chars left</label>
             
-            <label for="form_answer">Your answer:
+            <label for="form_answer" class="formular__label">Your answer:
             </label>
             <textarea required 
                 name="answer" 
@@ -37,7 +37,7 @@
                 class="formular__textarea"
                 maxlength="150"></textarea>
                 <output class="counter" id="counter_answer" data-js="output_counter_answer"></output>
-                <label for="counter_question" class="counter_label">chars left</label>
+                <label for="counter_question" class="counter__label">chars left</label>
 
             <label for="">Tag:</label>
             <input required 
@@ -55,11 +55,11 @@
                  class="submit_button">
                     Submit
             </button>
-        
-        
+        <ul data-js="formUL">
+        </ul>
+    
         </form>
 
-        <footer>
             <nav class="navigation">
                 <ul class="navigation__list">
                   <li class="navigation__list-item navigation__list-item--active">
@@ -133,7 +133,6 @@
                   </li>
                 </ul>
               </nav>
-        </footer>
 
 
     </section>
